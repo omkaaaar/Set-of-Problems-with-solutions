@@ -1,0 +1,2 @@
+The array after removing duplicate elements is 
+1 2 3 
