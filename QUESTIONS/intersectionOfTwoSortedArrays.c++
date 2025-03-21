@@ -1,5 +1,5 @@
 
-
+//! Intersection of sorted array
 // array1[] = {1 2 3 3 4 5 6}
 // array2[] = {2 3 3 5 6 6 7}
 
@@ -13,34 +13,35 @@
 // else (element of array 1 == element of array 2)
 //     move indexes(i, j) of both the arrays to the next element
 
-
-
 #include <bits/stdc++.h>
 using namespace std;
 
 vector<int> findIntersection(int arr1[], int arr2[], int n, int m)
 {
-        int i = 0, j = 0;
-        vector<int> ans;
-        while(i<n && j < m){
-            if(arr1[i] < arr2[j]){
-                i++;
-
-            }else if(arr2[j] < arr1[i]){
-                j++;
-            }
-            
-            else{
-                ans.push_back(arr2[j]);
-                i++; j++;   
-            }
+    int i = 0, j = 0;
+    vector<int> ans;
+    while (i < n && j < m)
+    {
+        if (arr1[i] < arr2[j])
+        {
+            i++;
         }
-        return ans; 
+        else if (arr2[j] < arr1[i])
+        {
+            j++;
+        }
+
+        else
+        {
+            ans.push_back(arr2[j]);
+            i++;
+            j++;
+        }
+    }
+    return ans;
 }
 
 int main()
-
-
 
 {
     int n = 7, m = 7;
