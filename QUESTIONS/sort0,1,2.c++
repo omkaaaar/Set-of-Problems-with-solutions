@@ -12,8 +12,6 @@
 
 // Approach:
 
-// Note: Here in this tutorial we will work based on the value of the mid pointer.
-
 // The steps will be the following:
 
 // First, we will run a loop that will continue until mid <= high.
