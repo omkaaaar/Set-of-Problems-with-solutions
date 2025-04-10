@@ -60,6 +60,14 @@ If you'd like to contribute:
 
 Let's help each other learn!
 
+## 📌 Disclaimer
+
+All the solutions in this repository are based on **Striver's A2Z DSA Sheet**. Huge thanks to [Striver](https://takeuforward.org/) for creating such a well-structured and beginner-friendly resource — it's been incredibly helpful in improving my understanding of Data Structures and Algorithms.
+
+If you're looking for a more in-depth explanation of these problems, I highly recommend checking out the original sheet here:  
+👉 [Striver's A2Z DSA Course Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
+
+
 ## 📬 Contact
 
 Created with ❤️ by [Omkar Kallekar](https://github.com/omkaaaar)  
