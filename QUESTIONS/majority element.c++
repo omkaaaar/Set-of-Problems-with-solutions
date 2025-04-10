@@ -1,27 +1,61 @@
 #include <iostream>
 using namespace std;
 
+//! Using moores voting algorithm
 int majorityElement(int arr[], int n)
 {
-    // We assume elements are in a known small range (like 0 to 1000)
-    const int MAX = 100005;
-    int freq[MAX] = {0};
-
+    int count = 0;
+    int element;
     for (int i = 0; i < n; i++)
     {
-        freq[arr[i]]++;
-    }
-
-    for (int i = 0; i < MAX; i++)
-    {
-        if (freq[i] > n / 2)
+        if (count == 0)
         {
-            return i;
+            element = arr[i];
+            count = 1;
+        }
+        else if (arr[i] == element)
+        {
+            count++;
+        }
+        else
+        {
+            count--;
         }
     }
-
+    int count1 = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == element)
+        {
+            count1++;
+        }
+        if (count1 > n / 2)
+            return element;
+    }
     return -1;
 }
+
+// int majorityElement(int arr[], int n)
+// {
+//     // We assume elements are in a known small range (like 0 to 1000)
+//     const int MAX = 100005;
+//     int freq[MAX] = {0};
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         freq[arr[i]]++;
+//     }
+
+//     for (int i = 0; i < MAX; i++)
+//     {
+//         if (freq[i] > n / 2)
+//         {
+//             return i;
+//         }
+//     }
+
+//     return -1;
+// }
 
 // ! Brute force approach
 // int majorityElement(int arr[], int n)
@@ -54,3 +88,6 @@ int main()
 
     return 0;
 }
+
+// ! For better understanding
+//? https://takeuforward.org/data-structure/find-the-majority-element-that-occurs-more-than-n-2-times/
